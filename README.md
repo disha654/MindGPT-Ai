@@ -13,23 +13,6 @@ This project includes a Node.js backend connected to the Hugging Face Inference 
 - ✅ Full-stack architecture
 - ✅ Easy deployment
 
----
-
-## 🏗️ Project Structure
-chatgpt-clone/
-│
-├── backend/
-│ ├── server.js
-│ ├── package.json
-│ └── .env
-│
-├── frontend/
-│ ├── index.html
-│ ├── style.css
-│ └── script.js
-│
-└── README.md
-
 
 ---
 
@@ -123,4 +106,5 @@ This project is for educational purposes.
 
 Disha V
 GitHub: https://github.com/disha654
+
 
