@@ -1,0 +1,32 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MindGPT</title>
+    <link rel="stylesheet" href="/public/styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="hero">
+        <h1>MINDGPT</h1>
+        <p class="hero-subtitle">Ask anything and get concise answers powered by Llama 3.1.</p>
+        <span class="model-pill" id="modelPill">meta-llama/Llama-3.1-8B-Instruct</span>
+      </header>
+
+      <section class="chat-log" id="chatLog"></section>
+
+      <form class="composer" id="chatForm">
+        <textarea id="prompt" placeholder="Ask anything..." required></textarea>
+        <button id="sendBtn" type="submit">
+          <span class="send-icon">⚡</span>
+          Send
+        </button>
+      </form>
+
+      <div class="status" id="status">Ready</div>
+    </main>
+
+    <script src="/public/app.js"></script>
+  </body>
+</html>
