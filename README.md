@@ -1,5 +1,5 @@
 # 🤖 MindGPT AI Web App 
-https://mindgpt-c8240xj2t-disha-vs-projects.vercel.app
+https://mindgpt-82ahckhwi-disha-vs-projects.vercel.app
 
 A full-stack AI chat application built using a Hugging Face large language model.  
 This project includes a Node.js backend connected to the Hugging Face Inference API and a responsive frontend that mimics the ChatGPT interface.
@@ -109,6 +109,7 @@ This project is for educational purposes.
 
 Disha V
 GitHub: https://github.com/disha654
+
 
 
 
