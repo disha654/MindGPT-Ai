@@ -74,7 +74,9 @@ OR open `index.html` directly in browser.
 | Variable | Description |
 |----------|------------|
 | HF_API_KEY | Hugging Face API Key |
-| MODEL | Selected Hugging Face Model |
+| HF_MODEL / MODEL | Selected Hugging Face Model |
+
+The backend now uses `https://router.huggingface.co/v1/chat/completions` exclusively, so only router-compatible models work.
 
 ---
 
