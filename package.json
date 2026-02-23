@@ -1,0 +1,21 @@
+﻿{
+  "name": "mindgpt",
+  "version": "1.0.0",
+  "private": true,
+  "description": "ChatGPT-like app powered by Hugging Face Llama 3.1 8B Instruct",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "dev:bg": "powershell -ExecutionPolicy Bypass -File ./scripts/start-bg.ps1",
+    "dev:stop": "powershell -ExecutionPolicy Bypass -File ./scripts/stop-bg.ps1"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2"
+  }
+}

@@ -1,0 +1,218 @@
+﻿:root {
+  --bg: #04060c;
+  --panel: #090f1e;
+  --card: #0f1b33;
+  --glow: rgba(93, 242, 198, 0.35);
+  --ink: #f4f8ff;
+  --muted: #a2b0c8;
+  --accent: #5df2c6;
+  --accent-2: #1b9fff;
+  --border: rgba(255, 255, 255, 0.1);
+  --shadow: 0 35px 90px rgba(2, 3, 10, 0.65);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Inter", "Segoe UI", system-ui, sans-serif;
+  background:
+    radial-gradient(circle at 15% 15%, rgba(27, 159, 255, 0.25), transparent 45%),
+    radial-gradient(circle at 80% 0%, rgba(93, 242, 198, 0.3), transparent 45%),
+    var(--bg);
+  color: var(--ink);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 32px 16px 48px;
+}
+
+.app-shell {
+  width: min(1100px, 100%);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0));
+  border-radius: 34px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+  overflow: hidden;
+  backdrop-filter: blur(18px);
+}
+
+.hero {
+  padding: 48px 60px 24px;
+  text-align: center;
+}
+
+.hero-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+ .hero h1 {
+   margin: 16px 0 10px;
+   font-size: clamp(2rem, 3vw, 2.8rem);
+   letter-spacing: 0.12em;
+   text-transform: uppercase;
+   font-weight: 700;
+}
+
+.hero-subtitle {
+  margin: 0 auto 18px;
+  max-width: 520px;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.model-pill {
+  display: inline-block;
+  padding: 6px 18px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  font-size: 0.76rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--muted);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.chat-log {
+  min-height: 320px;
+  max-height: 450px;
+  padding: 20px 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  overflow-y: auto;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  background: radial-gradient(circle at top, rgba(255, 255, 255, 0.05), transparent 60%);
+}
+
+.message {
+  max-width: 75%;
+  padding: 16px 18px;
+  border-radius: 18px;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  font-size: 0.98rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid transparent;
+  box-shadow: 0 12px 30px rgba(2, 3, 10, 0.45);
+  backdrop-filter: blur(6px);
+}
+
+.message.user {
+  align-self: flex-end;
+  background: rgba(93, 242, 198, 0.18);
+  border-color: rgba(93, 242, 198, 0.4);
+}
+
+.message.assistant {
+  align-self: flex-start;
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+.composer {
+  padding: 24px 40px 32px;
+  background: var(--card);
+  display: flex;
+  gap: 14px;
+  align-items: flex-end;
+}
+
+#prompt {
+  flex: 1;
+  min-height: 52px;
+  max-height: 170px;
+  resize: vertical;
+  border-radius: 28px;
+  padding: 20px 24px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(0, 0, 0, 0.25);
+  color: var(--ink);
+  font-size: 1rem;
+  font-family: inherit;
+  line-height: 1.5;
+  box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.35);
+}
+
+#prompt:focus {
+  outline: 2px solid var(--accent);
+  border-color: transparent;
+  box-shadow: 0 0 0 2px rgba(93, 242, 198, 0.4);
+}
+
+#sendBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border: none;
+  border-radius: 999px;
+  padding: 0 28px;
+  height: 54px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #04132b;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  cursor: pointer;
+  box-shadow: 0 20px 40px rgba(13, 21, 56, 0.45);
+  transition: transform 130ms ease, box-shadow 130ms ease;
+}
+
+#sendBtn:active {
+  transform: translateY(1px) scale(0.99);
+}
+
+#sendBtn:focus-visible {
+  outline: 2px solid rgba(255, 255, 255, 0.7);
+  outline-offset: 2px;
+}
+
+.status {
+  padding: 12px 40px;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+::selection {
+  background: rgba(93, 242, 198, 0.3);
+  color: #04132b;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 24px 14px 32px;
+  }
+
+  .hero {
+    padding: 36px 24px 20px;
+  }
+
+  .chat-log {
+    padding: 18px 20px;
+  }
+
+  .composer {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  #prompt {
+    width: 100%;
+  }
+
+  #sendBtn {
+    width: 100%;
+    justify-content: center;
+  }
+}
